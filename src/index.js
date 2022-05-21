@@ -9,8 +9,13 @@ const menuButton = document.getElementById("menu");
 const contactButton = document.getElementById("contact");
 const footer = document.getElementById("footer");
 const mainContentContainer = document.getElementById("main-content-container");
+
+// initiate new content variables
 let menuContentContainer;
 let homeContentContainer;
+let contactContentContainer;
+let newH2;
+
 // let newH2;
 
 // initiate currentView to know what page user is looking at
@@ -65,7 +70,6 @@ homeButton.addEventListener("click", (e) => {
 });
 
 // function to switch to menu when clicked
-
 
 menuButton.addEventListener("click", (e) => {
   if (currentView === "menu") {
@@ -510,7 +514,6 @@ menuButton.addEventListener("click", (e) => {
 
 // function to switch to contact when clicked
 
-
 contactButton.addEventListener("click", (e) => {
   if (currentView === "contact") {
   } else if (currentView === "home") {
@@ -532,7 +535,6 @@ contactButton.addEventListener("click", (e) => {
     newH2.innerHTML = `Call us: 201-582-7189`;
 
     currentView = "contact";
-    console.log("iiii");
   } else if (currentView === "onload") {
     const target = e.target;
 
@@ -552,7 +554,6 @@ contactButton.addEventListener("click", (e) => {
     newH2.innerHTML = `Call us: 201-582-7189`;
 
     currentView = "contact";
-    console.log("heyeyeye");
   } else if (currentView === "menu") {
     const target = e.target;
 
@@ -572,8 +573,6 @@ contactButton.addEventListener("click", (e) => {
     newH2.innerHTML = `Call us: 201-582-7189`;
 
     currentView = "contact";
-
-    console.log("hereeeeeee");
   }
 });
 
