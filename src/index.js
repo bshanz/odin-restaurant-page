@@ -85,7 +85,6 @@ menuButton.addEventListener("click", (e) => {
     menuContentContainer.appendChild(menuGrid);
     menuGrid.classList.add("menu-grid");
 
-    //new grid card one
     const menuItems = {
       'Grilled Octopus': 'Freshly caught in the Aegean. Mouth-watering.',
       'Chicken Parmesan': 'Imported from the Italian countryside.',
@@ -98,7 +97,7 @@ menuButton.addEventListener("click", (e) => {
       'Wagyu Beef Tequila Tacos': 'Combined with the freshness of home-made salsa.',
     };
 
-    for (key in menuItems) {
+    for (const key in menuItems) {
       const gridCard = document.createElement('div');
       const title = document.createElement('h3');
       const description = document.createElement('p');
@@ -106,6 +105,7 @@ menuButton.addEventListener("click", (e) => {
       description.innerText = menuItems[key];
       gridCard.classList.add('grid-card');
       gridCard.appendChild(title);
+      gridCard.appendChild(description);
       menuGrid.appendChild(gridCard);
     }
 
