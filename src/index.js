@@ -8,9 +8,6 @@ import { renderContact } from './contact.js';
 // cache the dom
 
 const mainContent = document.getElementById("main-content");
-const homeButton = document.getElementById("home");
-const menuButton = document.getElementById("menu");
-const contactButton = document.getElementById("contact");
 const footer = document.getElementById("footer");
 const mainContentContainer = document.getElementById("main-content-container");
 
@@ -20,14 +17,14 @@ let currentView = "";
 
 // function to switch to home when clicked
 
-homeButton.addEventListener("click", (e) => {
+document.getElementById("home").addEventListener("click", (e) => {
     renderHome();
     currentView = "home";
 });
 
 // function to switch to menu when clicked
 
-menuButton.addEventListener("click", (e) => {
+document.getElementById("menu").addEventListener("click", (e) => {
     renderMenu();
     // set the current view to menu
     currentView = "menu";
@@ -35,7 +32,7 @@ menuButton.addEventListener("click", (e) => {
 
 // function to switch to contact when clicked
 
-contactButton.addEventListener("click", (e) => {
+document.getElementById("contact").addEventListener("click", (e) => {
     renderContact();
     currentView = "contact";
 });
