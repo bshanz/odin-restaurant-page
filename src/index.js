@@ -5,12 +5,6 @@ import { renderHome } from './home.js';
 import { renderMenu } from './menu.js';
 import { renderContact } from './contact.js';
 
-// cache the dom
-
-const mainContent = document.getElementById("main-content");
-const footer = document.getElementById("footer");
-const mainContentContainer = document.getElementById("main-content-container");
-
 // initiate currentView to know what page user is looking at
 
 let currentView = "";
@@ -26,7 +20,6 @@ document.getElementById("home").addEventListener("click", (e) => {
 
 document.getElementById("menu").addEventListener("click", (e) => {
     renderMenu();
-    // set the current view to menu
     currentView = "menu";
 });
 
@@ -58,5 +51,6 @@ window.onload = function () {
   ];
   let date = new Date();
 
-  footer.innerHTML = months[date.getMonth()] + " " + date.getFullYear();
+  document.getElementById("footer").innerHTML =
+      months[date.getMonth()] + " " + date.getFullYear();
 };
