@@ -1,7 +1,7 @@
 export function renderContact() {
 
     const container = document.getElementById('main-content-container');
-    container.innerHTML = ''
+    container.innerHTML = '';
     const contactContentContainer = document.createElement("div");
     container.appendChild(contactContentContainer);
     contactContentContainer.classList.add("main-content-container");

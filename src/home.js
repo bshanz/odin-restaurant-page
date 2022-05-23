@@ -1,7 +1,7 @@
 export function renderHome() {
 
     const container = document.getElementById('main-content-container');
-    container.innerHTML = ''
+    container.innerHTML = '';
     const homeContentContainer = document.createElement("div");
     container.appendChild(homeContentContainer);
     homeContentContainer.classList.add("main-content-container");
