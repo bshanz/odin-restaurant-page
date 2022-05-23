@@ -35,9 +35,22 @@ document.getElementById("contact").addEventListener("click", (e) => {
 window.onload = function () {
   currentView = "onload";
 
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let date = new Date();
+
   document.getElementById("footer").innerHTML =
-      new Date().toLocaleDateString(undefined, {
-        month: 'long',
-        year: 'numeric',
-      });
+      months[date.getMonth()] + " " + date.getFullYear();
 };
